@@ -14,8 +14,8 @@ app.set('view engine', 'jade');
 
 
 app.post('/', multer({ dest: './uploads/'}).single('upl'), function(req,res){ 
-    console.log(1);
-    console.log(req.body); //form fields 	/* example output: { title: 'abc' } */ 
+    // console.log(1);
+    // console.log(req.body); //form fields 	/* example output: { title: 'abc' } */ 
     console.log(req.file);
     //res.render("size",{size:req.file.size});
     res.end(JSON.stringify({size:req.file.size}));
